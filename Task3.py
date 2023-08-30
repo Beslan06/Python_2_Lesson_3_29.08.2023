@@ -1,3 +1,4 @@
+# Создаем словарь вещей с их весом
 items = {
     "спальник": 1.5,
     "палатка": 3.0,
@@ -7,8 +8,12 @@ items = {
     "одежда": 1.0
 }
 
+# Максимальный вес рюкзака
 max_weight = 5.0
+
+# Создаем словарь для вещей, которые помещаются в рюкзак (вес <= максимального веса)
 backpack = {item: weight for item, weight in items.items() if weight <= max_weight}
 
+# Выводим вещи, которые поместились в рюкзак, с указанием веса
 for item, weight in backpack.items():
     print(f"{item}: {weight} кг")
